@@ -7,3 +7,5 @@ echo 'Add this in /etc/apt/sources.list'
 sudo apt-get install tightvncserver -y
 sudo apt-get install xrdp -y
 service xrdp start
+
+sudo apt-get install build-essential ruby-dev libpcap-dev net-tools -y
