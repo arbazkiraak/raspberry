@@ -33,6 +33,7 @@ apt-get install ruby -y
 sudo apt-get install build-essential ruby-dev libpcap-dev net-tools -y
 gem install bettercap
 
+apt-get install apache2 -y
 
 apt-get install virtualenv
 virtualenv kiraak
@@ -58,4 +59,4 @@ pip install --upgrade --force-reinstall --no-cache-dir jupyter
 
 ------------------------------------------
 
-
+#P
