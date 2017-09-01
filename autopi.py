@@ -37,12 +37,25 @@ gem install bettercap
 apt-get install virtualenv
 virtualenv kiraak
 source kiraak/bin/activate
+
+Method 1:
 pip install --upgrade pip
+pip install PySock
+pip install urllib3
+sudo apt-get install python-dev python3-dev python-pip python3-pip
+sudo apt-get install python-dev ipython jupyter-notebook
+python2 -m pip install ipykernel
+jupyter-notebook --no-browser --ip=192.168.0.108 --port=1337
+
+Method 2: (InCorrect)
+
 #https://www.anaconda.com/blog/developer-blog/conda-support-raspberry-pi-2-and-power8-le/
 wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
 bash Anaconda2-4.4.0-Linux-x86_64.sh
 source ~/.bashrc
 conda install anaconda-client
 pip install --upgrade --force-reinstall --no-cache-dir jupyter
+
+------------------------------------------
 
 
