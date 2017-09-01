@@ -33,3 +33,9 @@ apt-get install ruby -y
 sudo apt-get install build-essential ruby-dev libpcap-dev net-tools -y
 gem install bettercap
 
+
+apt-get install virtualenv
+virtualenv kiraak
+source kiraak/bin/activate
+wget https://repo.continuum.io/archive/Anaconda2-4.4.0-Linux-x86_64.sh
+bash Anaconda2-4.4.0-Linux-x86_64.sh
