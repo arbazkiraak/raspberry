@@ -37,5 +37,12 @@ gem install bettercap
 apt-get install virtualenv
 virtualenv kiraak
 source kiraak/bin/activate
-wget https://repo.continuum.io/archive/Anaconda2-4.4.0-Linux-x86_64.sh
+pip install --upgrade pip
+#https://www.anaconda.com/blog/developer-blog/conda-support-raspberry-pi-2-and-power8-le/
+wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
 bash Anaconda2-4.4.0-Linux-x86_64.sh
+source ~/.bashrc
+conda install anaconda-client
+pip install --upgrade --force-reinstall --no-cache-dir jupyter
+
+
