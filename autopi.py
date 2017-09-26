@@ -55,10 +55,32 @@ static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 
 ---------------------------------
+root@raspberrypi:/home/pi# cat /etc/network/interfaces
+# interfaces(5) file used by ifup(8) and ifdown(8)
 
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+iface eth0 inet manual
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+allow-hotplug wlan1
+iface wlan1 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+---------------------------------------------------------------------
 
 
 sudo raspi-config
+enabled SSH
 
 apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6
 echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free'
