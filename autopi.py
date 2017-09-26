@@ -1,6 +1,8 @@
 #!/bin/bash
 
 --------------------------------------------------
+DHCP NEW INSTALLED CONFIG :
+
 root@raspberrypi:/home/pi# cat /etc/dhcpcd.conf
 # A sample configuration for dhcpcd.
 # See dhcpcd.conf(5) for details.
@@ -55,6 +57,8 @@ static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 
 ---------------------------------
+INTERFACES NEW INSTALL CONFIG:
+
 root@raspberrypi:/home/pi# cat /etc/network/interfaces
 # interfaces(5) file used by ifup(8) and ifdown(8)
 
@@ -81,6 +85,11 @@ iface wlan1 inet manual
 
 sudo raspi-config
 enabled SSH
+
+sudo nano /etc/ssh/sshd_config
+Edit: PermitRootLogin yes
+/etc/init.d/ssh restart
+
 
 apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6
 echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free'
