@@ -132,5 +132,22 @@ conda install anaconda-client
 pip install --upgrade --force-reinstall --no-cache-dir jupyter
 
 ------------------------------------------
+# Setting Up Audio / Bluetooth :
 
-#P
+First login as PI user
+pulseaudio --start
+bluetoothctl
+power on
+discoverable on
+pairable on
+agent on
+default-agent 
+scan on
+pair XX:XX:XX:XX:XX:XX
+trust XX:XX:XX:XX:XX:XX
+connect XX:XX:XX:XX:XX:XX
+
+sudo apt-get install pi-bluetooth blueman -y
+sudo apt-get install pulseaudio pavucontrol pulseaudio-module-bluetooth -y
+#Connect device with above bluettothctl
+#Now go to settings and audio settings , playblack and change it to bluetooth
