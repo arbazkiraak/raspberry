@@ -103,6 +103,7 @@ sudo apt-get install xrdp -y
 service xrdp start
 
 apt-get install ruby -y
+bash https://gist.github.com/blacktm/8302741 # Install Ruby first with this gist
 sudo apt-get install build-essential ruby-dev libpcap-dev net-tools -y
 gem install bettercap
 
